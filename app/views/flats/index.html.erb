@@ -1,0 +1,21 @@
+<div class="container">
+
+  <h1>flats</h1>
+
+    <div class="container">
+    <% @flats.each do |flat| %>
+      <p><%= flat.name %></p>
+      <p><%= flat.address %></p>
+      <p><%= flat.description %></p>
+      <p><%= flat.price_per_night %></p>
+      <p><%= link_to 'Show', flat %></p>
+      <p><%= link_to 'Edit', edit_flat_path(flat) %></p>
+      <p><%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </tr>
+    <% end %>
+
+</div>
+
+<br>
+
+<%= link_to 'New flat', new_flat_path %>
